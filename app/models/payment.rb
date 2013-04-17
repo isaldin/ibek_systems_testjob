@@ -1,7 +1,8 @@
 class Payment < ActiveRecord::Base
-  attr_accessible :credit_card_number
-
+  validates :credit_card_number, :uniqueness => true
   validate :verify_card_number
+
+  attr_accessible :credit_card_number
 
   def verify_card_number
     if self[:credit_card_number] !~ /^[0-9]{16}$/
