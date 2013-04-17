@@ -8,9 +8,9 @@ class PaymentsController < ApplicationController
     @payment = Payment.new(params[:payment])
 
     if @payment.save
-      redirect_to :action => :index
+      redirect_to payments_path
     else
-      render :action => :new
+      render 'new'
     end
   end
 
