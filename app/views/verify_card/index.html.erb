@@ -1,0 +1,5 @@
+<%= form_for @payment, :url => url_for(:action => :create) do |f| %>
+    <%= f.label :credit_card_number %>
+    <%= f.text_field :credit_card_number %>
+    <%= f.submit 'Verify!' %>
+<% end %>
