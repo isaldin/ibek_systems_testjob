@@ -1,0 +1,7 @@
+<ul>
+  <% @payments.each do |p| %>
+      <li><%= p.credit_card_number  %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'new', new_payment_path %>

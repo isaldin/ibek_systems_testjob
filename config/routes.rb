@@ -1,8 +1,8 @@
 IbekSystems::Application.routes.draw do
 
-  root :to => 'verify_card#index'
+  root :to => 'payments#index'
 
-  post '/create' => 'verify_card#create'
+  resources :payments
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
